@@ -1,0 +1,792 @@
+{
+  "goals": [
+    {
+      "title": "Get good at Python",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can write clear Python programs using core syntax, control flow, functions, modules, and idiomatic naming",
+          "weight": 3
+        },
+        {
+          "id": "s2",
+          "description": "Can choose and use appropriate Python data structures, comprehensions, iterators, and generators to manipulate data effectively",
+          "weight": 3
+        },
+        {
+          "id": "s3",
+          "description": "Can read, understand, and modify Python code they did not write",
+          "weight": 3
+        },
+        {
+          "id": "s4",
+          "description": "Can design reusable code with appropriate abstractions, classes, exceptions, and module boundaries",
+          "weight": 3
+        },
+        {
+          "id": "s5",
+          "description": "Can work with files, JSON, APIs, command-line arguments, and other common Python standard-library tools",
+          "weight": 3
+        },
+        {
+          "id": "s6",
+          "description": "Can diagnose bugs using tracebacks, debugging tools, logging, and small reproducible examples",
+          "weight": 3
+        },
+        {
+          "id": "s7",
+          "description": "Can verify Python code with meaningful tests and improve its reliability, readability, and performance",
+          "weight": 3
+        },
+        {
+          "id": "s8",
+          "description": "Can build and maintain a complete Python project with a clear interface, dependencies, documentation, and conventional project structure",
+          "weight": 3
+        }
+      ],
+      "id": "g1",
+      "created_at": "2026-09-06"
+    },
+    {
+      "title": "Learn to bake bread",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can identify the roles of flour, water, yeast, salt, and other common ingredients in bread dough.",
+          "weight": 3
+        },
+        {
+          "id": "s2",
+          "description": "Can accurately measure ingredients and adjust dough hydration to achieve a desired consistency.",
+          "weight": 3
+        },
+        {
+          "id": "s3",
+          "description": "Can mix and knead dough to develop appropriate gluten structure, whether by hand or with equipment.",
+          "weight": 3
+        },
+        {
+          "id": "s4",
+          "description": "Can recognize when dough has fermented sufficiently based on its appearance, texture, and volume.",
+          "weight": 3
+        },
+        {
+          "id": "s5",
+          "description": "Can shape dough into common forms while maintaining structure and surface tension.",
+          "weight": 3
+        },
+        {
+          "id": "s6",
+          "description": "Can bake bread with an appropriately browned crust and fully cooked interior by managing temperature and timing.",
+          "weight": 3
+        },
+        {
+          "id": "s7",
+          "description": "Can diagnose common bread problems\u2014such as dense texture, poor rise, excessive spreading, or underbaking\u2014and make appropriate adjustments.",
+          "weight": 3
+        }
+      ],
+      "id": "g2",
+      "created_at": "2026-09-06"
+    },
+    {
+      "title": "improving at becoming a general developer and to code application using python",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can write clear, maintainable Python programs using functions, classes, modules, and appropriate data structures",
+          "weight": 3
+        },
+        {
+          "id": "s2",
+          "description": "Can read, understand, debug, and modify Python code written by someone else",
+          "weight": 3
+        },
+        {
+          "id": "s3",
+          "description": "Can design applications by translating requirements into components, data models, interfaces, and error-handling behavior",
+          "weight": 3
+        },
+        {
+          "id": "s4",
+          "description": "Can build Python applications that interact reliably with files, databases, APIs, and other external systems",
+          "weight": 3
+        },
+        {
+          "id": "s5",
+          "description": "Can create automated tests for Python code and use them to prevent regressions",
+          "weight": 3
+        },
+        {
+          "id": "s6",
+          "description": "Can use version control, documentation, logging, and development tools effectively in application projects",
+          "weight": 3
+        },
+        {
+          "id": "s7",
+          "description": "Can deploy, monitor, and improve a Python application in a real or production-like environment",
+          "weight": 3
+        }
+      ],
+      "id": "g3",
+      "created_at": "2026-09-06"
+    },
+    {
+      "title": "Learn woodworking",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can safely use common hand tools, power tools, and woodworking equipment while maintaining a safe work area.",
+          "weight": 5
+        },
+        {
+          "id": "s2",
+          "description": "Can identify common woods and sheet goods, understand their relevant properties, and select suitable materials for a project.",
+          "weight": 4
+        },
+        {
+          "id": "s3",
+          "description": "Can accurately measure, mark, cut, drill, plane, sand, and shape wood to practical tolerances.",
+          "weight": 5
+        },
+        {
+          "id": "s4",
+          "description": "Can create reliable woodworking joints appropriate to the strength, appearance, and movement requirements of a project.",
+          "weight": 5
+        },
+        {
+          "id": "s5",
+          "description": "Can interpret or develop plans and build a functional wooden project with accurate parts, sound assembly, and appropriate hardware.",
+          "weight": 5
+        },
+        {
+          "id": "s6",
+          "description": "Can prepare, apply, and evaluate finishes that protect wood and achieve the intended appearance.",
+          "weight": 4
+        },
+        {
+          "id": "s7",
+          "description": "Can diagnose and correct common problems involving inaccuracies, tear-out, warping, weak joints, and finish defects.",
+          "weight": 3
+        }
+      ],
+      "id": "g4",
+      "created_at": "2026-09-08"
+    },
+    {
+      "title": "to learn to create fullstack applications from scratch using react, typescript and python",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can build responsive, accessible user interfaces in React using TypeScript, including reusable components, forms, client-side state, and routing.",
+          "weight": 5
+        },
+        {
+          "id": "s2",
+          "description": "Can design and implement Python backend services that expose well-structured APIs, validate input, handle errors, and apply appropriate business logic.",
+          "weight": 5
+        },
+        {
+          "id": "s3",
+          "description": "Can connect a React frontend to a Python backend and reliably manage loading, success, error, and empty states across API-driven user experiences.",
+          "weight": 5
+        },
+        {
+          "id": "s4",
+          "description": "Can design and integrate persistent data storage, including database schemas, queries, relationships, migrations, and safe handling of application data.",
+          "weight": 5
+        },
+        {
+          "id": "s5",
+          "description": "Can implement essential application concerns such as authentication, authorization, session or token management, input validation, and protection against common web vulnerabilities.",
+          "weight": 4
+        },
+        {
+          "id": "s6",
+          "description": "Can test fullstack applications at the component, backend, API, and end-to-end levels to identify regressions and verify expected behavior.",
+          "weight": 4
+        },
+        {
+          "id": "s7",
+          "description": "Can configure, deploy, monitor, and maintain a fullstack React, TypeScript, and Python application in a production-like environment.",
+          "weight": 4
+        }
+      ],
+      "id": "g5",
+      "created_at": "2026-09-10"
+    },
+    {
+      "title": "Understanding ai, how embeddings work, Rag, LLMS, MCP, Weights etc",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can explain the core concepts and differences among artificial intelligence, machine learning, deep learning, generative AI, and large language models.",
+          "weight": 5
+        },
+        {
+          "id": "s2",
+          "description": "Can describe how neural-network weights represent learned patterns, how training updates them, and how weights affect a model\u2019s behavior, capabilities, and limitations.",
+          "weight": 5
+        },
+        {
+          "id": "s3",
+          "description": "Can explain how language models tokenize text, generate predictions, use context, and produce outputs, including the roles of training, inference, and prompting.",
+          "weight": 5
+        },
+        {
+          "id": "s4",
+          "description": "Can explain what embeddings are, how text and other data are represented as vectors, and how similarity search enables tasks such as semantic retrieval and clustering.",
+          "weight": 5
+        },
+        {
+          "id": "s5",
+          "description": "Can explain how retrieval-augmented generation works, including document chunking, indexing, retrieval, context injection, generation, and common sources of inaccurate or irrelevant answers.",
+          "weight": 5
+        },
+        {
+          "id": "s6",
+          "description": "Can distinguish MCP from model training and retrieval systems, and explain how MCP enables models to interact with external tools, resources, and services through standardized interfaces.",
+          "weight": 4
+        },
+        {
+          "id": "s7",
+          "description": "Can assess AI systems using appropriate criteria such as factual accuracy, grounding, relevance, latency, cost, privacy, security, and failure modes, and can identify when a system\u2019s output should not be trusted.",
+          "weight": 4
+        }
+      ],
+      "id": "g6",
+      "created_at": "2026-09-16"
+    }
+  ],
+  "entries": [
+    {
+      "id": "e1",
+      "goal_id": "g5",
+      "date": "2026-09-10",
+      "text": "working on a personal ai_journal with a fastAPI backend and typescript frontend",
+      "evidence": []
+    },
+    {
+      "id": "e2",
+      "goal_id": "g5",
+      "date": "2026-09-10",
+      "text": "the ai_journal works on python fundamentals, nested loops, guard clauses, dict vs list mutration, append() vs key assignment, min()/round() for clamping values, f strings, JSON and persistant storage, desining a derived state-architecture and working with the openAI stuctured-output API",
+      "evidence": [
+        {
+          "subtask_id": "s2",
+          "confidence": 0.25,
+          "delta": 0.06,
+          "reason": "Working with Python fundamentals and the OpenAI structured-output API provides limited evidence toward implementing Python services and structured API behavior, but does not demonstrate a complete backend service."
+        },
+        {
+          "subtask_id": "s4",
+          "confidence": 0.35,
+          "delta": 0.08,
+          "reason": "JSON and persistent-storage work directly touches application data persistence, though it does not yet demonstrate database schemas, queries, relationships, or migrations."
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "goal_id": "g5",
+      "date": "2026-09-10",
+      "text": "splitting responsibilty between AI and code, debugging and real crash tracebacks, and git hygiene",
+      "evidence": []
+    },
+    {
+      "id": "e4",
+      "goal_id": "g6",
+      "date": "2026-09-10",
+      "text": "/switch g1",
+      "evidence": []
+    },
+    {
+      "id": "e5",
+      "goal_id": "g1",
+      "date": "2026-09-10",
+      "text": "working on a python project where I Splitting responsibility between AI and code: letting the model judge only confidence+reason, while Python enforces hard invariants (delta capping, no exceeding 100%) \u2014 not trusting a language model with arithmetic guarantees",
+      "evidence": [
+        {
+          "subtask_id": "s4",
+          "confidence": 0.55,
+          "delta": 0.12,
+          "reason": "Designing a separation of responsibilities between the model and Python enforcement demonstrates attention to modular boundaries and appropriate abstractions."
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "goal_id": "g1",
+      "date": "2026-09-10",
+      "text": "Debugging real crash tracebacks: TypeError from stale function-call signatures, NameError from schema/scope mistakes, tracing bugs back to loop-nesting level and variable scope",
+      "evidence": [
+        {
+          "subtask_id": "s6",
+          "confidence": 0.95,
+          "delta": 0.21,
+          "reason": "Directly demonstrates diagnosing real Python crashes by interpreting TypeError and NameError tracebacks and tracing causes to function signatures, schema/scope mistakes, loop nesting, and variable scope."
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "goal_id": "g1",
+      "date": "2026-09-10",
+      "text": "Git hygiene: .gitignore, removing a committed secret from tracked files, understanding when history rewriting is/isn't necessary based on whether a remote was ever pushed to",
+      "evidence": []
+    },
+    {
+      "id": "e8",
+      "goal_id": "g1",
+      "date": "2026-09-10",
+      "text": "OS-level integration: launching an external app via a custom URI scheme (os.startfile, urllib.parse.quote) and understanding why module-level code runs on every import",
+      "evidence": [
+        {
+          "subtask_id": "s5",
+          "confidence": 0.82,
+          "delta": 0.18,
+          "reason": "Used Python standard-library tools such as os.startfile and urllib.parse.quote to integrate with an external application through a custom URI scheme."
+        },
+        {
+          "subtask_id": "s3",
+          "confidence": 0.45,
+          "delta": 0.1,
+          "reason": "Demonstrated understanding of Python import behavior, specifically why module-level code executes whenever a module is imported."
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "goal_id": "g1",
+      "date": "2026-09-10",
+      "text": "I wrote a for loop to iterate over a list of goals and print each one",
+      "evidence": [
+        {
+          "subtask_id": "s1",
+          "confidence": 0.9,
+          "delta": 0.2,
+          "reason": "Writing a for loop to iterate over a list and print each item directly demonstrates use of Python control flow and core syntax."
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "goal_id": "g1",
+      "date": "2026-09-11",
+      "text": "> I wrote a for loop to iterate over a list of goals and print each one",
+      "evidence": [
+        {
+          "subtask_id": "s1",
+          "confidence": 0.75,
+          "delta": 0.17,
+          "reason": "Writing a for loop over a list and printing each goal directly demonstrates basic Python control flow and iteration."
+        }
+      ]
+    },
+    {
+      "id": "e11",
+      "goal_id": "g1",
+      "date": "2026-09-11",
+      "text": "> I debugged a for loop that was skipping the last item in the list",
+      "evidence": [
+        {
+          "subtask_id": "s6",
+          "confidence": 0.78,
+          "delta": 0.17,
+          "reason": "Directly describes diagnosing and correcting a loop bug involving an omitted list item."
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "goal_id": "g1",
+      "date": "2026-09-16",
+      "text": "Understanding ai, how embeddings work, Rag, LLMS, MCP, Weights etc",
+      "evidence": []
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Python",
+      "summary": "A programming language used to build applications and implement control-flow logic.",
+      "related": [
+        "for loop"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "for loop",
+      "summary": "A control-flow structure that repeats a block of code for each item in a sequence or range.",
+      "related": [
+        "nested for loops",
+        "Python"
+      ],
+      "mention_count": 3,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "nested for loops",
+      "summary": "A for loop placed inside another for loop to process combinations or multidimensional data.",
+      "related": [
+        "for loop",
+        "Python"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "dovetail joint",
+      "summary": "A woodworking joint that interlocks fan-shaped pins and tails to join pieces of wood securely.",
+      "related": [],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "hand sawing",
+      "summary": "A woodworking technique for cutting material manually with a handsaw along a controlled path.",
+      "related": [
+        "dovetail joint"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "FastAPI",
+      "summary": "FastAPI is a Python web framework for building backend APIs.",
+      "related": [
+        "Python",
+        "backend",
+        "API"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "TypeScript",
+      "summary": "TypeScript is a typed programming language used to build the journal's frontend.",
+      "related": [
+        "frontend"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "backend",
+      "summary": "A backend handles server-side logic, data access, and API requests for an application.",
+      "related": [
+        "FastAPI",
+        "API"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "frontend",
+      "summary": "A frontend provides the user-facing interface through which people interact with an application.",
+      "related": [
+        "TypeScript",
+        "backend"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "AI journal",
+      "summary": "An AI journal is an application for recording, organizing, and potentially reflecting on personal experiences with AI assistance.",
+      "related": [
+        "FastAPI",
+        "TypeScript",
+        "backend",
+        "frontend"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "API",
+      "summary": "An API defines how the frontend and backend exchange data and functionality.",
+      "related": [
+        "FastAPI",
+        "backend",
+        "frontend"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "separation of concerns",
+      "summary": "Dividing responsibilities between AI and application code so each handles the work it is best suited for.",
+      "related": [
+        "AI journal",
+        "backend",
+        "frontend",
+        "API"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "debugging",
+      "summary": "Systematically identifying and fixing the causes of unexpected software behavior.",
+      "related": [
+        "Python",
+        "FastAPI",
+        "TypeScript"
+      ],
+      "mention_count": 2,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "stack trace",
+      "summary": "A diagnostic record showing the sequence of function calls that led to a crash or error.",
+      "related": [
+        "debugging",
+        "Python",
+        "FastAPI"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "Git hygiene",
+      "summary": "Maintaining a clean, understandable version-control history through practices such as focused commits and avoiding unnecessary changes.",
+      "related": [
+        "backend",
+        "frontend",
+        "API"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "hard invariants",
+      "summary": "Hard invariants are non-negotiable rules that code enforces regardless of a model's output.",
+      "related": [
+        "Python",
+        "separation of concerns",
+        "debugging"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "AI guardrails",
+      "summary": "AI guardrails constrain model outputs by combining model judgment with deterministic checks for safety and correctness.",
+      "related": [
+        "separation of concerns",
+        "hard invariants",
+        "API"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "TypeError",
+      "summary": "A TypeError occurs when an operation or function receives a value of an inappropriate type, such as arguments that no longer match a function signature.",
+      "related": [
+        "debugging",
+        "stack trace",
+        "Python"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "NameError",
+      "summary": "A NameError occurs when code refers to a variable or name that is not defined in the current scope.",
+      "related": [
+        "debugging",
+        "stack trace",
+        "Python"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "function signatures",
+      "summary": "A function signature defines the parameters a function accepts, and stale calls can cause runtime errors when the signature changes.",
+      "related": [
+        "debugging",
+        "TypeError",
+        "Python"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "variable scope",
+      "summary": "Variable scope determines where a name is defined and accessible, making scope mistakes especially important when tracing nested loops.",
+      "related": [
+        "NameError",
+        "nested for loops",
+        "debugging",
+        "Python"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": ".gitignore",
+      "summary": "A .gitignore file prevents specified files, such as local secrets, from being added to Git tracking in the first place.",
+      "related": [
+        "Git hygiene",
+        "tracked files"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "tracked files",
+      "summary": "A file can remain tracked by Git even after being added to .gitignore, so it must be explicitly removed from the index.",
+      "related": [
+        ".gitignore",
+        "Git hygiene"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "history rewriting",
+      "summary": "Rewriting Git history is necessary for removing a secret from already-pushed commits, but is usually unnecessary when the repository was never pushed to a remote.",
+      "related": [
+        "Git hygiene",
+        "tracked files"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "custom URI schemes",
+      "summary": "Custom URI schemes let an application or operating system route specially formatted links to an external app.",
+      "related": [
+        "Python",
+        "OS-level integration"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "os.startfile",
+      "summary": "Python\u2019s os.startfile launches a file, URL, or registered URI using the operating system\u2019s associated handler.",
+      "related": [
+        "Python",
+        "custom URI schemes"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "URL encoding",
+      "summary": "URL encoding safely escapes characters such as spaces and punctuation so values can be embedded in URI components.",
+      "related": [
+        "Python",
+        "custom URI schemes"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "import side effects",
+      "summary": "Module-level Python code executes during import, so any actions there occur each time the module is imported or reloaded.",
+      "related": [
+        "Python",
+        "variable scope",
+        "debugging"
+      ],
+      "mention_count": 1,
+      "first_seen": "2026-09-11"
+    },
+    {
+      "name": "list",
+      "summary": "A Python list stores the sequence of goals that the for loop processes.",
+      "related": [
+        "Python",
+        "for loop"
+      ],
+      "first_seen": "2026-09-11",
+      "mention_count": 2
+    },
+    {
+      "name": "off-by-one error",
+      "summary": "An off-by-one error occurs when iteration starts or stops one position too early or too late, such as skipping the final item.",
+      "related": [
+        "for loop",
+        "list",
+        "debugging"
+      ],
+      "first_seen": "2026-09-11",
+      "mention_count": 1
+    },
+    {
+      "name": "embeddings",
+      "summary": "Embeddings represent text or other data as numerical vectors that capture semantic relationships.",
+      "related": [
+        "AI",
+        "retrieval-augmented generation",
+        "large language models"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "retrieval-augmented generation",
+      "summary": "Retrieval-augmented generation improves large language model responses by retrieving relevant external information before generating an answer.",
+      "related": [
+        "embeddings",
+        "large language models",
+        "API"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "large language models",
+      "summary": "Large language models generate and transform text by learning statistical patterns from extensive training data.",
+      "related": [
+        "AI",
+        "embeddings",
+        "model weights",
+        "retrieval-augmented generation"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "Model Context Protocol",
+      "summary": "Model Context Protocol is a standard for connecting AI models to external tools and data sources.",
+      "related": [
+        "AI",
+        "API",
+        "FastAPI",
+        "backend"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "model weights",
+      "summary": "Model weights are learned numerical parameters that encode patterns and capabilities in a machine learning model.",
+      "related": [
+        "large language models",
+        "embeddings",
+        "AI"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "AI",
+      "summary": "Artificial intelligence refers to systems that perform tasks involving capabilities such as learning, reasoning, language understanding, and generation.",
+      "related": [
+        "large language models",
+        "embeddings",
+        "Model Context Protocol",
+        "AI guardrails"
+      ],
+      "first_seen": "2026-09-16",
+      "mention_count": 1
+    }
+  ],
+  "active_goal_id": "g6"
+}

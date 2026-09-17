@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body { @apply bg-ground text-ink font-sans antialiased; font-variant-numeric: tabular-nums; }
+  a { @apply text-accent-300 no-underline; }
+  a:hover { @apply text-accent-200 underline; }
+  button { font: inherit; cursor: pointer; }
+  ::selection { @apply bg-accent-800; }
+  *:focus-visible { outline: 2px solid #9184d9; outline-offset: 2px; }
+}
