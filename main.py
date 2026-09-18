@@ -25,12 +25,12 @@ def find_goal(journal, goal_id):
     return None
 
 
-def find_matching_subtask(journal, goal_id):
+def find_matching_subtask(journal, goal_id, subtask_id):
     active_goal = find_goal(journal, goal_id)
     for subtask in active_goal["subtasks"]:
-        if subtask["subtask_id"] == goal_id:
+        if subtask["id"] == subtask_id:
             return subtask          
-        return None
+    return None
             
 
 def process_entry(journal, goal_id, text):
@@ -41,13 +41,13 @@ def process_entry(journal, goal_id, text):
     DELTA_FACTOR = 0.22
     updates = ai.update_progress(active_goal, fills, text)
     evidence = []
-
+    
     for update in updates:
+        matching_subtask = find_matching_subtask(journal, goal_id, update["subtask_id"])
         delta = min(
             1 - fills[update["subtask_id"]],
             round(update["confidence"] * DELTA_FACTOR, 2),
         )
-
         if delta <= 0:
             continue
         evidence.append(
@@ -56,9 +56,9 @@ def process_entry(journal, goal_id, text):
                 "confidence": update["confidence"],
                 "delta": delta,
                 "reason": update["reason"],
-                "description": find_matching_subtask["description"],
-                "weight": find_matching_subtask["weight"],
-                "fills": fills[update["subtask_id"]]
+                "description":matching_subtask["description"],
+                "weight": matching_subtask["weight"],
+                "before": fills[update["subtask_id"]]
             }
         )
 
@@ -95,7 +95,14 @@ def process_entry(journal, goal_id, text):
 
     storage.save(journal)
     
-    return 
+    results = {
+        "goal_id": goal_id,
+        "moves": evidence,
+        "empty": len("moves") == 0,
+        "goalBefore": fills,
+        "goalAfter": 
+        
+    }
 
 
 if __name__ == "__main__":
