@@ -256,6 +256,48 @@
       ],
       "id": "g6",
       "created_at": "2026-09-16"
+    },
+    {
+      "title": "Building this application",
+      "subtasks": [
+        {
+          "id": "s1",
+          "description": "Can clearly explain the application's target users, core problem, main use cases, and success criteria.",
+          "weight": 5
+        },
+        {
+          "id": "s2",
+          "description": "Can design an application architecture that separates responsibilities and supports the application's required features.",
+          "weight": 5
+        },
+        {
+          "id": "s3",
+          "description": "Can implement the application's core user-facing functionality end to end.",
+          "weight": 5
+        },
+        {
+          "id": "s4",
+          "description": "Can store, retrieve, validate, and protect application data reliably.",
+          "weight": 4
+        },
+        {
+          "id": "s5",
+          "description": "Can connect the application to required external services, APIs, or platform capabilities.",
+          "weight": 3
+        },
+        {
+          "id": "s6",
+          "description": "Can identify and fix functional, usability, performance, and security issues in the application.",
+          "weight": 4
+        },
+        {
+          "id": "s7",
+          "description": "Can deploy the application and operate it in a real environment with appropriate monitoring and maintenance.",
+          "weight": 4
+        }
+      ],
+      "id": "g7",
+      "created_at": "2026-09-24"
     }
   ],
   "entries": [
@@ -429,6 +471,137 @@
           "before": 0.37
         }
       ]
+    },
+    {
+      "id": "e14",
+      "goal_id": "g7",
+      "date": "2026-09-24",
+      "text": "Building a full-stack learning tracker from scratch: Python fundamentals (control flow, functions, dicts vs. lists, debugging real tracebacks, loop-variable scoping, migration scripts), reading and fixing my own logic bugs (premature returns inside loops, mutable vs. immutable updates, name-before-assignment errors), designing a data model where derived values (progress) are never stored but recomputed from a log of evidence, working with an LLM API under JSON-schema-constrained structured output, building a REST API with FastAPI (routes, async/await, CORS, request/response bodies), and building a React frontend (useState, useEffect, prop threading, controlled inputs, fetch/promises, the Rules of Hooks) that talks to that backend over HTTP \u2014 plus enough of the surrounding ecosystem (git branches and history, npm/Node tooling, Obsidian plugin installation, force-directed graph rendering with SVG) to ship the whole thing end to end.",
+      "evidence": [
+        {
+          "subtask_id": "s2",
+          "confidence": 0.72,
+          "delta": 0.16,
+          "reason": "You designed a data model with derived progress values and separated backend and frontend responsibilities through a FastAPI/React architecture.",
+          "description": "Can design an application architecture that separates responsibilities and supports the application's required features.",
+          "weight": 5,
+          "before": 0
+        },
+        {
+          "subtask_id": "s3",
+          "confidence": 0.84,
+          "delta": 0.18,
+          "reason": "You implemented core user-facing functionality end to end, including a FastAPI backend, React frontend, and HTTP communication between them.",
+          "description": "Can implement the application's core user-facing functionality end to end.",
+          "weight": 5,
+          "before": 0
+        },
+        {
+          "subtask_id": "s4",
+          "confidence": 0.48,
+          "delta": 0.11,
+          "reason": "You worked on evidence-log data modeling, migration scripts, validation, and structured JSON handling, though reliable protection of application data is not clearly demonstrated.",
+          "description": "Can store, retrieve, validate, and protect application data reliably.",
+          "weight": 4,
+          "before": 0
+        },
+        {
+          "subtask_id": "s5",
+          "confidence": 0.78,
+          "delta": 0.17,
+          "reason": "You integrated an LLM API with schema-constrained output and connected the React client to the backend over HTTP.",
+          "description": "Can connect the application to required external services, APIs, or platform capabilities.",
+          "weight": 3,
+          "before": 0
+        },
+        {
+          "subtask_id": "s6",
+          "confidence": 0.86,
+          "delta": 0.19,
+          "reason": "You directly identified and fixed multiple logic, scoping, mutation, and runtime traceback bugs in the application.",
+          "description": "Can identify and fix functional, usability, performance, and security issues in the application.",
+          "weight": 4,
+          "before": 0
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "goal_id": "g1",
+      "date": "2026-09-24",
+      "text": "Building a full-stack learning tracker from scratch: Python fundamentals (control flow, functions, dicts vs. lists, debugging real tracebacks, loop-variable scoping, migration scripts), reading and fixing my own logic bugs (premature returns inside loops, mutable vs. immutable updates, name-before-assignment errors), designing a data model where derived values (progress) are never stored but recomputed from a log of evidence, working with an LLM API under JSON-schema-constrained structured output, building a REST API with FastAPI (routes, async/await, CORS, request/response bodies), and building a React frontend (useState, useEffect, prop threading, controlled inputs, fetch/promises, the Rules of Hooks) that talks to that backend over HTTP \u2014 plus enough of the surrounding ecosystem (git branches and history, npm/Node tooling, Obsidian plugin installation, force-directed graph rendering with SVG) to ship the whole thing end to end.",
+      "evidence": [
+        {
+          "subtask_id": "s1",
+          "confidence": 0.85,
+          "delta": 0.19,
+          "reason": "The entry directly demonstrates work with Python fundamentals including control flow, functions, modules, naming, and core syntax while building the tracker.",
+          "description": "Can write clear Python programs using core syntax, control flow, functions, modules, and idiomatic naming",
+          "weight": 3,
+          "before": 0.45
+        },
+        {
+          "subtask_id": "s2",
+          "confidence": 0.45,
+          "delta": 0.1,
+          "reason": "Using and comparing dictionaries and lists demonstrates some data-structure competency, but comprehensions, iterators, and generators are not clearly shown.",
+          "description": "Can choose and use appropriate Python data structures, comprehensions, iterators, and generators to manipulate data effectively",
+          "weight": 3,
+          "before": 0.15
+        },
+        {
+          "subtask_id": "s3",
+          "confidence": 0.75,
+          "delta": 0.17,
+          "reason": "Reading and fixing logic bugs in existing code, including premature returns, mutation issues, and name-before-assignment errors, directly demonstrates code comprehension and modification.",
+          "description": "Can read, understand, and modify Python code they did not write",
+          "weight": 3,
+          "before": 0.1
+        },
+        {
+          "subtask_id": "s4",
+          "confidence": 0.65,
+          "delta": 0.14,
+          "reason": "The derived-progress data model and separation across a FastAPI backend and React frontend show meaningful abstraction and boundary design, though classes and exceptions are not specifically demonstrated.",
+          "description": "Can design reusable code with appropriate abstractions, classes, exceptions, and module boundaries",
+          "weight": 3,
+          "before": 0.12
+        },
+        {
+          "subtask_id": "s5",
+          "confidence": 0.9,
+          "delta": 0.2,
+          "reason": "The entry clearly demonstrates using JSON-schema-constrained API output, REST endpoints, HTTP request and response bodies, and related standard tooling.",
+          "description": "Can work with files, JSON, APIs, command-line arguments, and other common Python standard-library tools",
+          "weight": 3,
+          "before": 0.18
+        },
+        {
+          "subtask_id": "s6",
+          "confidence": 0.9,
+          "delta": 0.2,
+          "reason": "Diagnosing real tracebacks and specific Python bugs such as loop-variable scoping and name-before-assignment errors directly demonstrates debugging ability.",
+          "description": "Can diagnose bugs using tracebacks, debugging tools, logging, and small reproducible examples",
+          "weight": 3,
+          "before": 0.38
+        },
+        {
+          "subtask_id": "s8",
+          "confidence": 0.8,
+          "delta": 0.18,
+          "reason": "Building and shipping a full-stack application end to end with a Python API, frontend, dependencies, tooling, and surrounding project ecosystem strongly demonstrates complete-project capability.",
+          "description": "Can build and maintain a complete Python project with a clear interface, dependencies, documentation, and conventional project structure",
+          "weight": 3,
+          "before": 0
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "goal_id": "g1",
+      "date": "2026-09-24",
+      "text": "/map",
+      "evidence": []
     }
   ],
   "concepts": [
@@ -834,7 +1007,154 @@
       ],
       "first_seen": "2026-09-22",
       "mention_count": 1
+    },
+    {
+      "name": "dictionary",
+      "summary": "A Python dictionary stores key-value mappings and is useful for representing structured application data.",
+      "related": [
+        "Python",
+        "list",
+        "variable scope",
+        "FastAPI"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "derived state",
+      "summary": "Derived state is computed from authoritative evidence rather than stored separately, preventing inconsistent progress values.",
+      "related": [
+        "hard invariants",
+        "separation of concerns",
+        "data model"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "JSON Schema",
+      "summary": "JSON Schema constrains and validates the structure of data exchanged with an LLM API.",
+      "related": [
+        "API",
+        "large language models",
+        "AI guardrails",
+        "function signatures"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "async/await",
+      "summary": "Async/await enables asynchronous Python or JavaScript code to perform I/O without blocking other work.",
+      "related": [
+        "Python",
+        "FastAPI",
+        "frontend",
+        "API"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "React",
+      "summary": "React builds interactive frontend interfaces from components whose state and data flow drive the rendered UI.",
+      "related": [
+        "frontend",
+        "TypeScript",
+        "API",
+        "separation of concerns"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "REST API",
+      "summary": "A REST API exposes backend resources through HTTP routes with structured request and response bodies.",
+      "related": [
+        "FastAPI",
+        "API",
+        "backend",
+        "frontend"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "control flow",
+      "summary": "Control flow determines how a program branches, loops, returns, and executes statements in sequence.",
+      "related": [
+        "Python",
+        "for loop",
+        "nested for loops",
+        "debugging",
+        "off-by-one error"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "mutable vs. immutable updates",
+      "summary": "Mutable updates change existing data in place, while immutable updates create replacement values that make state changes easier to track safely.",
+      "related": [
+        "list",
+        "dictionary",
+        "derived state",
+        "React",
+        "debugging"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "migration scripts",
+      "summary": "Migration scripts transform existing stored data or schemas so an application can evolve without losing compatibility.",
+      "related": [
+        "Python",
+        "data model",
+        "JSON Schema",
+        "Git hygiene"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "structured output",
+      "summary": "Structured output constrains an AI response to a predictable schema that software can validate and consume reliably.",
+      "related": [
+        "large language models",
+        "JSON Schema",
+        "API",
+        "retrieval-augmented generation"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "CORS",
+      "summary": "CORS is a browser security mechanism that controls which origins may make requests to a backend API.",
+      "related": [
+        "FastAPI",
+        "REST API",
+        "frontend",
+        "backend",
+        "API"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
+    },
+    {
+      "name": "Rules of Hooks",
+      "summary": "The Rules of Hooks require React Hooks to be called consistently at the top level of components or custom Hooks.",
+      "related": [
+        "React",
+        "useState",
+        "useEffect",
+        "frontend",
+        "debugging"
+      ],
+      "first_seen": "2026-09-24",
+      "mention_count": 1
     }
   ],
-  "active_goal_id": "g6"
+  "active_goal_id": "g7"
 }

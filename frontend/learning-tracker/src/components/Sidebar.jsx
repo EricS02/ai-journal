@@ -1,9 +1,9 @@
-import { Graph, ListDashes, Notebook as NotebookIcon } from '@phosphor-icons/react';
+import { Graph, ListDashes, Notebook as NotebookIcon, X } from '@phosphor-icons/react';
 import { entriesFor, fillsFor, goalProgress, isDormant } from '../lib/progress.js';
 
 export default function Sidebar({
   goals, logs, screen, activeGoalId, conceptCount, entryCount, today,
-  onOpenGoal, onNotebook, onConcepts, onGraph,
+  onOpenGoal, onNotebook, onConcepts, onGraph, onDeleteGoal,
 }) {
   return (
     <aside className="sticky top-0 flex h-screen flex-col gap-[30px] self-start border-r border-divider px-[22px] py-[30px]">
@@ -33,21 +33,29 @@ export default function Sidebar({
             const dormant = isDormant(last && last.date);
             const active = screen === 'detail' && activeGoalId === g.id;
             return (
-              <button
+              <div
                 key={g.id}
-                onClick={() => onOpenGoal(g.id)}
-                className={`flex w-full flex-col gap-2 rounded-r-sm border-l px-[10px] pb-3 pt-[11px] text-left hover:bg-neutral-900 ${
+                className={`group flex w-full flex-col gap-2 rounded-r-sm border-l px-[10px] pb-3 pt-[11px] hover:bg-neutral-900 ${
                   active ? 'border-accent bg-neutral-900' : 'border-neutral-800'
                 } ${dormant ? 'opacity-60' : ''}`}
               >
                 <span className="flex w-full items-baseline gap-[10px]">
-                  <span className="flex-1 text-[13px] leading-snug">{g.title}</span>
+                  <button onClick={() => onOpenGoal(g.id)} className="flex-1 text-left text-[13px] leading-snug">
+                    {g.title}
+                  </button>
                   <span className="text-[12px] text-accent-300">{progress}</span>
+                  <button
+                    onClick={() => { if (window.confirm(`Delete "${g.title}"? Its logged entries will be kept.`)) onDeleteGoal(g.id); }}
+                    title="Delete goal"
+                    className="flex-none text-neutral-600 opacity-0 hover:text-red-400 group-hover:opacity-100"
+                  >
+                    <X size={12} />
+                  </button>
                 </span>
-                <span className="block h-1 w-full overflow-hidden rounded-[1px] bg-neutral-800">
+                <button onClick={() => onOpenGoal(g.id)} className="block h-1 w-full overflow-hidden rounded-[1px] bg-neutral-800 text-left">
                   <span className="block h-full bg-accent" style={{ width: progress + '%' }} />
-                </span>
-              </button>
+                </button>
+              </div>
             );
           })}
         </div>

@@ -57,6 +57,19 @@ export default function App() {
     setComposeGoalId(data.id)
   };
 
+  const deleteGoal = async (id) => {
+    await fetch(`http://localhost:5000/api/goals/${id}`, { method: "DELETE" })
+    const response = await fetch('http://localhost:5000/api/state')
+    const data = await response.json()
+    setConcepts(data.concepts)
+    setToday(data.today)
+    setGoals(data.goals)
+    setLogs(data.entries)
+
+    if (id === goalId) { setGoalId(data.goals[0]?.id ?? null); setScreen('notebook'); }
+    if (id === composeGoalId) setComposeGoalId(data.goals[0]?.id ?? null)
+  };
+
   const feed = useMemo(() => logs, [logs]);
 
 
@@ -80,6 +93,7 @@ if (!goals) return <div className="flex min-h-screen items-center justify-center
         onNotebook={() => setScreen('notebook')}
         onConcepts={() => setScreen('concepts')}
         onGraph={() => setScreen('graph')}
+        onDeleteGoal={deleteGoal}
       />
 
       <main className="flex justify-center px-10 pb-24 pt-10">

@@ -66,6 +66,21 @@ def create_goal(journal, title):
     storage.save(journal)
     return new_goal
 
+
+def delete_goal(journal, goal_id):
+    goal = find_goal(journal, goal_id)
+    if goal is None:
+        return {"error": "Needs to be a valid ID"}
+
+    journal["goals"].remove(goal)
+
+    if journal["active_goal_id"] == goal_id:
+        journal["active_goal_id"] = journal["goals"][0]["id"] if journal["goals"] else None
+
+    storage.save(journal)
+    return {"deleted": goal_id}
+
+
 def process_entry(journal, goal_id, text):
 
     active_goal = find_goal(journal, goal_id)
@@ -184,6 +199,11 @@ if __name__ == "__main__":
         elif command == "/goal":
             get_text_after_command = user_input[len("/goal") :].strip()
             create_goal(journal, get_text_after_command)
+
+        elif command == "/delete":
+            get_id_after_command = user_input[len("/delete") :].strip()
+            result = delete_goal(journal, get_id_after_command)
+            print(result)
 
         elif user_input == "/map":
             goal_count = vault.create_folder(journal)

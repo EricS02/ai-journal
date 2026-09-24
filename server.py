@@ -5,7 +5,7 @@ from fastapi import Request
 import storage
 import datetime
 
-from main import process_entry, create_goal
+from main import process_entry, create_goal, delete_goal
 
 
 
@@ -60,3 +60,8 @@ async def create_goal_route(request: Request):
         return create_goal(journal, title)
     except KeyError:
         return {"error": "title is required"}
+
+@app.delete("/api/goals/{goal_id}")
+def delete_goal_route(goal_id: str):
+    journal = storage.load()
+    return delete_goal(journal, goal_id)
