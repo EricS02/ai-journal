@@ -5,7 +5,7 @@ import EntryCard from './EntryCard.jsx';
 
 /** The main screen: one sheet, composer at the top, entries flowing down it. */
 export default function Notebook({
-  goals, logs, draft, onDraft, onSubmit, composeGoalId, onComposeGoal, result, today, onOpenGoal,
+  goals, logs, draft, onDraft, onSubmit, composeGoalId, onComposeGoal, onCreateGoal, result, today, onOpenGoal,
 }) {
   const feed = [...logs].sort(byNewest);
 
@@ -16,7 +16,7 @@ export default function Notebook({
           <h1 className="text-[20px] font-medium tracking-[-0.01em]">Notebook</h1>
           <span className="text-[12px] text-neutral-400">{logs.length} entries · newest first</span>
         </div>
-        <span className="text-[11px] text-neutral-400">{shortName(composeGoalId)}</span>
+        <span className="text-[11px] text-neutral-400">{shortName(goals, composeGoalId)}</span>
       </div>
 
       <Composer
@@ -26,13 +26,14 @@ export default function Notebook({
         onSubmit={onSubmit}
         composeGoalId={composeGoalId}
         onComposeGoal={onComposeGoal}
+        onCreateGoal={onCreateGoal}
         today={today}
       />
 
       <WhatMoved result={result} onOpenGoal={onOpenGoal} />
 
       <div className="flex flex-col">
-        {feed.map((entry) => <EntryCard key={entry.id} entry={entry} />)}
+        {feed.map((entry) => <EntryCard key={entry.id} entry={entry} goals={goals} />)}
       </div>
     </div>
   );

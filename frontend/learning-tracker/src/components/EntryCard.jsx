@@ -1,8 +1,8 @@
 import { dayStamp, findGoal, pct, shortName } from '../lib/progress.js';
 
-export default function EntryCard({ entry }) {
+export default function EntryCard({ entry, goals }) {
   const { day, month } = dayStamp(entry.date);
-  const goal = findGoal(entry.goal_id);
+  const goal = findGoal(goals, entry.goal_id);
 
   return (
     <article className="grid grid-cols-[56px_minmax(0,1fr)] gap-[22px] border-b border-divider pb-[26px] pl-[22px] pr-[34px] pt-6">
@@ -12,7 +12,7 @@ export default function EntryCard({ entry }) {
       </div>
       <div className="flex min-w-0 flex-col gap-[13px] border-l border-accent-800 pl-[22px]">
         <div className="flex items-baseline gap-[10px] text-[11px] text-neutral-400">
-          <span>{shortName(entry.goal_id)}</span>
+          <span>{shortName(goals, entry.goal_id)}</span>
           <span className="text-neutral-500">{entry.date}</span>
         </div>
         <p className="text-[14.5px] leading-[1.75] text-pretty">{entry.text}</p>

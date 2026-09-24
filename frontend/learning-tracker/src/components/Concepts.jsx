@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Graph } from '@phosphor-icons/react';
 
-const OBSIDIAN_MAP = 'obsidian://open?vault=notes&file=Learning%20Map';
-const noteHref = (name) => 'obsidian://open?vault=notes&file=' + encodeURIComponent(name);
+const VAULT_PATH = 'C:\\Users\\estec\\ai_journal\\vault';
+const safeFilename = (name) => name.replace(/[\\/:*?"<>|]/g, '');
+const OBSIDIAN_MAP = 'obsidian://open?path=' + encodeURIComponent(VAULT_PATH);
+const noteHref = (name) => 'obsidian://open?path=' + encodeURIComponent(`${VAULT_PATH}\\Concepts\\${safeFilename(name)}.md`);
 
 /** A flat, searchable list — deliberately not a visualisation. */
 export default function Concepts({ concepts }) {
@@ -53,7 +55,7 @@ export default function Concepts({ concepts }) {
             </div>
             <span className="text-[11.5px] text-neutral-400">{c.first_seen}</span>
             <span className="text-[11.5px] text-neutral-200">{c.mention_count}</span>
-            <a href={noteHref(c.name)} title="Open in Obsidian" className="whitespace-nowrap text-right text-[11.5px]">note &nearr;</a>
+            <a href={noteHref(c.name)} title="Open in Obsidian" className="whitespace-nowrap text-right text-[11.5px]">note ↗</a>
           </div>
         ))}
         <div className="border-t border-divider" />

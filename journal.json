@@ -403,6 +403,32 @@
       "date": "2026-09-16",
       "text": "Understanding ai, how embeddings work, Rag, LLMS, MCP, Weights etc",
       "evidence": []
+    },
+    {
+      "id": "e13",
+      "goal_id": "g1",
+      "date": "2026-09-22",
+      "text": "I practiced sorting a list with a custom key function",
+      "evidence": [
+        {
+          "subtask_id": "s2",
+          "confidence": 0.7,
+          "delta": 0.15,
+          "reason": "Practicing list sorting with a custom key function directly demonstrates manipulating data with Python's built-in operations and functions.",
+          "description": "Can choose and use appropriate Python data structures, comprehensions, iterators, and generators to manipulate data effectively",
+          "weight": 3,
+          "before": 0
+        },
+        {
+          "subtask_id": "s1",
+          "confidence": 0.35,
+          "delta": 0.08,
+          "reason": "Using a custom key function provides limited evidence of applying core Python syntax and functions.",
+          "description": "Can write clear Python programs using core syntax, control flow, functions, modules, and idiomatic naming",
+          "weight": 3,
+          "before": 0.37
+        }
+      ]
     }
   ],
   "concepts": [
@@ -705,7 +731,7 @@
         "for loop"
       ],
       "first_seen": "2026-09-11",
-      "mention_count": 2
+      "mention_count": 3
     },
     {
       "name": "off-by-one error",
@@ -785,6 +811,28 @@
         "AI guardrails"
       ],
       "first_seen": "2026-09-16",
+      "mention_count": 1
+    },
+    {
+      "name": "sorting",
+      "summary": "Sorting arranges the elements of a collection according to a specified ordering.",
+      "related": [
+        "list",
+        "Python",
+        "custom key function"
+      ],
+      "first_seen": "2026-09-22",
+      "mention_count": 1
+    },
+    {
+      "name": "custom key function",
+      "summary": "A custom key function computes the comparison value used to determine each element\u2019s position during sorting.",
+      "related": [
+        "sorting",
+        "function signatures",
+        "Python"
+      ],
+      "first_seen": "2026-09-22",
       "mention_count": 1
     }
   ],

@@ -7,12 +7,12 @@ import { entriesFor, fillsFor, findGoal, goalProgress, pct } from '../lib/progre
  * weight, segment FILL HEIGHT is its own progress. Click a segment or a row to
  * read every entry that gave it evidence, with confidence and stored reason.
  */
-export default function GoalDetail({ goalId, logs, onBack }) {
+export default function GoalDetail({ goals, goalId, logs, onBack }) {
   const [expanded, setExpanded] = useState(null);
-  const goal = findGoal(goalId);
-  const fills = fillsFor(goalId, logs);
+  const goal = findGoal(goals, goalId);
+  const fills = fillsFor(goals, goalId, logs);
   const entries = entriesFor(goalId, logs);
-  const progress = goalProgress(goalId, fills);
+  const progress = goalProgress(goals, goalId, fills);
   const toggle = (id) => setExpanded((cur) => (cur === id ? null : id));
 
   return (

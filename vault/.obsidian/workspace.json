@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "24d145095fba45aa",
+    "id": "e3926bd70fcda790",
     "type": "split",
     "children": [
       {
-        "id": "7dce1ed08475637d",
+        "id": "91bf03b64d58164b",
         "type": "tabs",
         "children": [
           {
-            "id": "01c9941fe29c3a62",
+            "id": "3ccce4444a89e9f5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Concepts/AI guardrails.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI guardrails"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6a7f0f2abd6a2d2a",
+    "id": "20fdc0ee56ebd45b",
     "type": "split",
     "children": [
       {
-        "id": "44f18a12e7bf2a49",
+        "id": "2349868928b90216",
         "type": "tabs",
         "children": [
           {
-            "id": "b8e70eeea22b7c48",
+            "id": "f04c0f5e7ea503b8",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "641349cfd0afd78e",
+            "id": "5eb11008330982d9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,7 +67,7 @@
             }
           },
           {
-            "id": "de225fcb993d0220",
+            "id": "21adc8d7df55f9fb",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,19 +86,20 @@
     "width": 300
   },
   "right": {
-    "id": "361c933e0a7a96a2",
+    "id": "cd2057ce4d541e3b",
     "type": "split",
     "children": [
       {
-        "id": "23882a500ba439a3",
+        "id": "a7195de77f27e3cc",
         "type": "tabs",
         "children": [
           {
-            "id": "c64aa0d6b0f9e889",
+            "id": "232c02a7c187f9e2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Concepts/AI guardrails.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,11 +113,12 @@
             }
           },
           {
-            "id": "14e40e2c3d32fe2c",
+            "id": "ab0c66fcc3cf6481",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Concepts/AI guardrails.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -121,7 +127,7 @@
             }
           },
           {
-            "id": "c7553b70f5522b1e",
+            "id": "340af720accc17f1",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -136,7 +142,7 @@
             }
           },
           {
-            "id": "59a42c1ea1ed2c7b",
+            "id": "7ca6630b4e60a24f",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -150,11 +156,12 @@
             }
           },
           {
-            "id": "4e26e2136adef144",
+            "id": "2bec6eaa303fe5ea",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Concepts/AI guardrails.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -172,6 +179,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "webpage-html-export:Export as HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -181,15 +189,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "01c9941fe29c3a62",
+  "active": "3ccce4444a89e9f5",
   "lastOpenFiles": [
-    "Untitled",
-    "frontend/learning-tracker/node_modules/ms/license.md",
-    "frontend/learning-tracker/node_modules/binary-extensions/readme.md",
-    "frontend/learning-tracker/node_modules/braces/README.md",
-    "frontend/learning-tracker/README.md",
-    "vault/Concepts/Python.md",
-    "vault/Concepts/nested for loops.md",
-    "vault/Concepts/for loop.md"
+    "AI guardrails.pdf",
+    "Goals/to learn to create fullstack applications from scratch using react, typescript and python.md",
+    "vault.html",
+    "Goals/Learn woodworking.md",
+    "Goals/Learn to bake bread.md",
+    "Goals/improving at becoming a general developer and to code application using python.md",
+    "Concepts/variable scope.md",
+    "Concepts/URL encoding.md",
+    "Concepts/TypeScript.md",
+    "Concepts/TypeError.md",
+    "Concepts/tracked files.md",
+    "Concepts/stack trace.md",
+    "Concepts/separation of concerns.md",
+    "Concepts/Python.md",
+    "Concepts/os.startfile.md",
+    "Concepts/off-by-one error.md",
+    "Concepts/nested for loops.md",
+    "Concepts/NameError.md",
+    "Concepts/list.md",
+    "Concepts/import side effects.md",
+    "Concepts/history rewriting.md",
+    "Concepts/hard invariants.md",
+    "Concepts/hand sawing.md",
+    "Concepts/Git hygiene.md",
+    "Concepts/function signatures.md",
+    "Concepts/frontend.md",
+    "Concepts/for loop.md"
   ]
 }

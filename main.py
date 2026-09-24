@@ -32,6 +32,39 @@ def find_matching_subtask(journal, goal_id, subtask_id):
             return subtask          
     return None
             
+def score(item):
+    return item["delta"] * item["weight"]
+
+
+def create_goal(journal, title):
+    subtasks = ai.plan_subtasks(title)
+
+    new_subtask = []
+    count = 0
+    for s in subtasks:
+        count += 1  # noqa: SIM113
+        new_subtask.append(
+            {
+                "id": f"s{count}",
+                "description": s["description"],
+                "weight": s["weight"],
+            }
+        )
+
+    goal_counter = f"g{len(journal['goals']) + 1}"
+    created_at = datetime.date.today().isoformat()  # noqa: DTZ011
+    new_goal = {
+        "title": title,
+        "subtasks": new_subtask,
+        "id": goal_counter,
+        "created_at": created_at,
+    }
+
+    journal["active_goal_id"] = new_goal["id"]
+    journal["goals"].append(new_goal)
+
+    storage.save(journal)
+    return new_goal
 
 def process_entry(journal, goal_id, text):
 
@@ -71,6 +104,8 @@ def process_entry(journal, goal_id, text):
     }
 
     journal["entries"].append(entry)
+    fills_after = progress.fills_for(active_goal, journal["entries"])
+
     storage.save(journal)
     print(progress_bar(progress.goal_progress(active_goal, fills)))
 
@@ -95,14 +130,23 @@ def process_entry(journal, goal_id, text):
 
     storage.save(journal)
     
+    total_weight = 0
+    for subtask in active_goal["subtasks"]:
+        total_weight += subtask["weight"]
+        
+    evidence.sort(key=score, reverse=True)
+    top_moves = evidence[:4]
+        
     results = {
-        "goal_id": goal_id,
-        "moves": evidence,
-        "empty": len("moves") == 0,
-        "goalBefore": fills,
-        "goalAfter": 
+        "goalId": goal_id,
+        "moves": top_moves,
+        "empty": len(top_moves) == 0,
+        "goalBefore": progress.goal_progress(active_goal, fills),
+        "goalAfter": progress.goal_progress(active_goal, fills_after),
+        "totalWeight": total_weight
         
     }
+    return results 
 
 
 if __name__ == "__main__":
@@ -139,33 +183,7 @@ if __name__ == "__main__":
 
         elif command == "/goal":
             get_text_after_command = user_input[len("/goal") :].strip()
-            subtasks = ai.plan_subtasks(get_text_after_command)
-
-            new_subtask = []
-            count = 0
-            for s in subtasks:
-                count += 1  # noqa: SIM113
-                new_subtask.append(
-                    {
-                        "id": f"s{count}",
-                        "description": s["description"],
-                        "weight": s["weight"],
-                    }
-                )
-
-            goal_counter = f"g{len(journal['goals']) + 1}"
-            created_at = datetime.date.today().isoformat()  # noqa: DTZ011
-            new_goal = {
-                "title": get_text_after_command,
-                "subtasks": new_subtask,
-                "id": goal_counter,
-                "created_at": created_at,
-            }
-
-            journal["active_goal_id"] = new_goal["id"]
-            journal["goals"].append(new_goal)
-
-            storage.save(journal)
+            create_goal(journal, get_text_after_command)
 
         elif user_input == "/map":
             goal_count = vault.create_folder(journal)

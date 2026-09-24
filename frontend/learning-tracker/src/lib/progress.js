@@ -1,12 +1,12 @@
 import { GOALS, TODAY } from '../data/mockData.js';
 
-export const findGoal = (id) => GOALS.find((g) => g.id === id);
+export const findGoal = (goals, id) => goals.find((g) => g.id === id);
 
 export const pct = (v) => Math.round(v * 100);
 
 /** Checkpoint fills for a goal, derived from the log entries that cite them. */
-export function fillsFor(goalId, logs) {
-  const goal = findGoal(goalId);
+export function fillsFor(goals, goalId, logs) {
+  const goal = findGoal(goals, goalId);
   const out = {};
   goal.subtasks.forEach((s) => { out[s.id] = 0; });
   logs
@@ -18,8 +18,8 @@ export function fillsFor(goalId, logs) {
 }
 
 /** 0-100, weight-normalised: sum(weight * fill) / sum(weight). */
-export function goalProgress(goalId, fills) {
-  const goal = findGoal(goalId);
+export function goalProgress(goals, goalId, fills) {
+  const goal = findGoal(goals, goalId);
   const total = goal.subtasks.reduce((a, s) => a + s.weight, 0);
   const sum = goal.subtasks.reduce((a, s) => a + s.weight * fills[s.id], 0);
   return Math.round((sum / total) * 100);
@@ -44,7 +44,10 @@ export function daysAgo(date) {
 export const isDormant = (lastDate) =>
   !lastDate || (new Date(TODAY) - new Date(lastDate)) / 86400000 > 7;
 
-export const shortName = (goalId) => (goalId === 'g1' ? 'Rust' : 'Transformer');
+export const shortName = (goals, goalId) => {
+  const goal = goals.find((g) => g.id === goalId);
+  return goal ? goal.title : goalId
+}
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 export function dayStamp(date) {

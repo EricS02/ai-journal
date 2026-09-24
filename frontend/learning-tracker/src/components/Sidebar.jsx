@@ -1,11 +1,9 @@
 import { Graph, ListDashes, Notebook as NotebookIcon } from '@phosphor-icons/react';
 import { entriesFor, fillsFor, goalProgress, isDormant } from '../lib/progress.js';
 
-const OBSIDIAN_MAP = 'obsidian://open?vault=notes&file=Learning%20Map';
-
 export default function Sidebar({
   goals, logs, screen, activeGoalId, conceptCount, entryCount, today,
-  onOpenGoal, onNotebook, onConcepts,
+  onOpenGoal, onNotebook, onConcepts, onGraph,
 }) {
   return (
     <aside className="sticky top-0 flex h-screen flex-col gap-[30px] self-start border-r border-divider px-[22px] py-[30px]">
@@ -14,21 +12,23 @@ export default function Sidebar({
           <span className="text-[13px] uppercase tracking-[0.14em]">Ledger</span>
           <span className="text-[11px] text-neutral-400">capability notebook</span>
         </button>
-        <a
-          href={OBSIDIAN_MAP}
-          title="Open the learning map in Obsidian"
-          className="grid h-[34px] w-[34px] flex-none place-items-center rounded-md border border-divider text-accent-300 hover:border-accent hover:bg-accent-900 hover:no-underline"
+        <button
+          onClick={onGraph}
+          title="Open the learning map"
+          className={`grid h-[34px] w-[34px] flex-none place-items-center rounded-md border text-accent-300 hover:border-accent hover:bg-accent-900 ${
+            screen === 'graph' ? 'border-accent bg-accent-900' : 'border-divider'
+          }`}
         >
           <Graph size={17} />
-        </a>
+        </button>
       </div>
 
       <div className="flex flex-col gap-[10px]">
         <div className="text-[10px] uppercase tracking-[0.12em] text-neutral-400">In progress</div>
         <div className="flex flex-col gap-[2px]">
           {goals.map((g) => {
-            const fills = fillsFor(g.id, logs);
-            const progress = goalProgress(g.id, fills);
+            const fills = fillsFor(goals, g.id, logs);
+            const progress = goalProgress(goals, g.id, fills);
             const last = entriesFor(g.id, logs)[0];
             const dormant = isDormant(last && last.date);
             const active = screen === 'detail' && activeGoalId === g.id;

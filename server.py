@@ -1,13 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Request
 
 import storage
 import datetime
 
+from main import process_entry, create_goal
+
+
+
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000"
+    "http://localhost:5173"
 ]
 
 
@@ -32,3 +37,26 @@ def get_state():
         "concepts": journal["concepts"],
         "today": datetime.date.today().isoformat()
     }
+
+@app.post("/api/entries")
+async def create_entry(request: Request):
+    journal = storage.load()
+    try:
+        body = await request.json()
+        goal_id = body["goal_id"]
+        text = body["text"]
+
+        return process_entry(journal, goal_id, text)
+    except KeyError:
+        return {"error": "goal_id and text are required"}
+
+@app.post("/api/goals")
+async def create_goal_route(request: Request):
+    journal = storage.load()
+    try:
+        body = await request.json()
+        title = body["title"]
+
+        return create_goal(journal, title)
+    except KeyError:
+        return {"error": "title is required"}
